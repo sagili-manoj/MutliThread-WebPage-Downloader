@@ -106,3 +106,4 @@ ulimit -n 1024
 ![Screenshot 2025-05-21 125927](https://github.com/user-attachments/assets/2402c649-1e1f-4380-b67c-3abe12e4557a)
 
 
+Downloaded web pages will be saved in the same folder that the file is currently running on.
