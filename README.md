@@ -22,9 +22,8 @@ A multithreaded C++ command-line application for downloading web pages from a li
    ```bash
    git clone https://github.com/your-username/WebPageDownloader.git
    cd WebPageDownloader
-2.**Install Dependcies And Run**
-  ##For Windows
-    # Install MSYS2 (if not already installed
+2. **Install Dependcies And Run**
+    #For Windows(Install MSYS2 (if not already installed))
   ```bash
     pacman -Syu
     pacman -Syu  # Run twice if prompted to close and reopen terminal
@@ -33,19 +32,16 @@ A multithreaded C++ command-line application for downloading web pages from a li
     pacman -S mingw-w64-x86_64-winpthreads
     g++ --version
     curl-config --version
-  ```
-  # Create urls.txt with URLs, e.g.:
-  echo https://example.com > urls.txt
-  echo https://www.wikipedia.org >> urls.txt
-  echo https://www.github.com >> urls.txt
-```bash
-  g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
-  ./downloader.exe
-  rm downloader.exe *.html errors.log
+     # Create urls.txt with URLs, e.g.:
+     echo https://example.com > urls.txt
+     echo https://www.wikipedia.org >> urls.txt
+     echo https://www.github.com >> urls.txt
+    g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+    ./downloader.exe
+    rm downloader.exe *.html errors.log
 ```
 ##For Linux
- # Install MSYS2 (if not already installed
-  ```bash
+  ```Terminal
     sudo apt update
     sudo apt install g++ libcurl4-openssl-dev libc6-dev
 
@@ -54,19 +50,17 @@ A multithreaded C++ command-line application for downloading web pages from a li
 
     # For Arch Linux (use instead of apt commands)
     # sudo pacman -S gcc curl glibc
-  ```
-  # Create urls.txt with URLs, e.g.:
-  echo https://example.com > urls.txt
-  echo https://www.wikipedia.org >> urls.txt
-  echo https://www.github.com >> urls.txt
-```bash
-  g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+     # Create urls.txt with URLs, e.g.:
+     echo https://example.com > urls.txt
+     echo https://www.wikipedia.org >> urls.txt
+     echo https://www.github.com >> urls.txt
+     g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
 
-  # Run the program
-  ./downloader
+     # Run the program
+     ./downloader
 
-  # Optional: Redirect verbose output for debugging
-  ./downloader > debug.log
+     # Optional: Redirect verbose output for debugging
+     ./downloader > debug.log
 
   # Clean up generated files
   rm downloader *.html errors.log
