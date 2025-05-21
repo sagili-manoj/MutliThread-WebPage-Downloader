@@ -26,9 +26,9 @@ A multithreaded C++ command-line application for downloading web pages from a li
 2. **Install Dependcies And Run**
    #For Windows
 ```bash
-   # Install MSYS2 (if not already installed)
-   # Download and run the MSYS2 installer from https://www.msys2.org/
-   # Open MSYS2 MinGW 64-bit terminal
+# Install MSYS2 (if not already installed)
+# Download and run the MSYS2 installer from https://www.msys2.org/
+# Open MSYS2 MinGW 64-bit terminal
 # Update MSYS2 packages
 pacman -Syu
 pacman -Syu  # Run twice if prompted to close and reopen terminal
@@ -66,28 +66,43 @@ rm downloader.exe *.html errors.log
 ```
 ##For Linux
   ```Terminal
-    sudo apt update
-    sudo apt install g++ libcurl4-openssl-dev libc6-dev
+# Install dependencies (Ubuntu/Debian)
+sudo apt update
+sudo apt install g++ libcurl4-openssl-dev libc6-dev
 
-    # For Fedora (use instead of apt commands)
-    # sudo dnf install gcc-c++ libcurl-devel glibc-devel
+# For Fedora (use instead of apt commands)
+# sudo dnf install gcc-c++ libcurl-devel glibc-devel
 
-    # For Arch Linux (use instead of apt commands)
-    # sudo pacman -S gcc curl glibc
-     # Create urls.txt with URLs, e.g.:
-     echo https://example.com > urls.txt
-     echo https://www.wikipedia.org >> urls.txt
-     echo https://www.github.com >> urls.txt
-     g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+# For Arch Linux (use instead of apt commands)
+# sudo pacman -S gcc curl glibc
 
-     # Run the program
-     ./downloader
+# Verify installations
+g++ --version
+curl-config --version
 
-     # Optional: Redirect verbose output for debugging
-     ./downloader > debug.log
+# Save WebPageDownloader.cpp (copy code to file)
+# Create urls.txt with URLs, e.g.:
+echo "https://example.com" > urls.txt
+echo "https://www.wikipedia.org" >> urls.txt
+echo "https://www.github.com" >> urls.txt
 
-  # Clean up generated files
-  rm downloader *.html errors.log
+# Compile the program
+g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+
+# Run the program
+./downloader
+
+# Optional: Redirect verbose output for debugging
+./downloader > debug.log
+
+# Clean up generated files
+rm downloader *.html errors.log
+
+# Optional: Ensure file descriptor limit for 100+ URLs
+ulimit -n 1024
 ```
 
-  
+## 📷 Example Output
+![Screenshot 2025-05-21 125927](https://github.com/user-attachments/assets/2402c649-1e1f-4380-b67c-3abe12e4557a)
+
+
