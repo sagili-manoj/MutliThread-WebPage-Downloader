@@ -46,14 +46,14 @@ pacman -S mingw-w64-x86_64-winpthreads
 g++ --version
 curl-config --version
 
-# Save WebPageDownloader.cpp (copy code to file)
+# Save main.cpp (copy code to file)
 # Create urls.txt with URLs, e.g.:
 echo https://example.com > urls.txt
 echo https://www.wikipedia.org >> urls.txt
 echo https://www.github.com >> urls.txt
 
 # Compile the program
-g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+g++ -std=c++11 main.cpp -lcurl -pthread -o downloader
 
 # Run the program
 ./downloader.exe
@@ -80,14 +80,14 @@ sudo apt install g++ libcurl4-openssl-dev libc6-dev
 g++ --version
 curl-config --version
 
-# Save WebPageDownloader.cpp (copy code to file)
+# Save main.cpp (copy code to file)
 # Create urls.txt with URLs, e.g.:
 echo "https://example.com" > urls.txt
 echo "https://www.wikipedia.org" >> urls.txt
 echo "https://www.github.com" >> urls.txt
 
 # Compile the program
-g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+g++ -std=c++11 main.cpp -lcurl -pthread -o downloader
 
 # Run the program
 ./downloader
