@@ -22,23 +22,47 @@ A multithreaded C++ command-line application for downloading web pages from a li
    ```bash
    git clone https://github.com/your-username/WebPageDownloader.git
    cd WebPageDownloader
+   ```
 2. **Install Dependcies And Run**
-    #For Windows(Install MSYS2 (if not already installed))
-  ```bash
-    pacman -Syu
-    pacman -Syu  # Run twice if prompted to close and reopen terminal
-    pacman -S mingw-w64-x86_64-gcc
-    pacman -S mingw-w64-x86_64-curl
-    pacman -S mingw-w64-x86_64-winpthreads
-    g++ --version
-    curl-config --version
-     # Create urls.txt with URLs, e.g.:
-     echo https://example.com > urls.txt
-     echo https://www.wikipedia.org >> urls.txt
-     echo https://www.github.com >> urls.txt
-    g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
-    ./downloader.exe
-    rm downloader.exe *.html errors.log
+   #For Windows
+```bash
+   # Install MSYS2 (if not already installed)
+   # Download and run the MSYS2 installer from https://www.msys2.org/
+   # Open MSYS2 MinGW 64-bit terminal
+# Update MSYS2 packages
+pacman -Syu
+pacman -Syu  # Run twice if prompted to close and reopen terminal
+
+# Install g++ (C++ compiler)
+pacman -S mingw-w64-x86_64-gcc
+
+# Install libcurl (for HTTP requests)
+pacman -S mingw-w64-x86_64-curl
+
+# Install winpthreads (included with gcc, but ensure it's present)
+pacman -S mingw-w64-x86_64-winpthreads
+
+# Verify installations
+g++ --version
+curl-config --version
+
+# Save WebPageDownloader.cpp (copy code to file)
+# Create urls.txt with URLs, e.g.:
+echo https://example.com > urls.txt
+echo https://www.wikipedia.org >> urls.txt
+echo https://www.github.com >> urls.txt
+
+# Compile the program
+g++ -std=c++11 WebPageDownloader.cpp -lcurl -pthread -o downloader
+
+# Run the program
+./downloader.exe
+
+# Optional: Redirect verbose output for debugging
+./downloader.exe > debug.log
+
+# Clean up generated files
+rm downloader.exe *.html errors.log
 ```
 ##For Linux
   ```Terminal
