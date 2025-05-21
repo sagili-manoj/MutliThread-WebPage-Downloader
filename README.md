@@ -20,7 +20,7 @@ A multithreaded C++ command-line application for downloading web pages from a li
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/WebPageDownloader.git
+   git clone https://github.com/sagili-manoj/WebPageDownloader.git
    cd WebPageDownloader
    ```
 2. **Install Dependcies And Run**
