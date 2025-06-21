@@ -1,7 +1,5 @@
 # Multi-Threaded Web Page Downloader (C++)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 A high-performance C++ command-line application designed to concurrently download web pages from a list of URLs. This project showcases advanced C++ concurrency patterns, robust resource management using RAII, and efficient network I/O with `libcurl`, making it ideal for demonstrating skills in system programming and distributed concepts.
 
 ## Features
